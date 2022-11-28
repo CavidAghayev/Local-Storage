@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    --bg-color: gray;
+    --text-color: white;
+    background-color: var(--bg-color);
+}
+body.dark{
+    --bg-color: yellow;
+    --text-color: brown;
+}
+section{
+    color: var(--text-color);
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+section   h1{
+    margin: 20px;
+}
+section p{
+    line-height: 30px;
+}
+.container {
+    width: 100%;
+    height: 100px;
+    background-color: teal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-logo {
+    font-family: inherit;
+    color: white;
+}
+
+.container-menu ul {
+    display: flex;
+}
+
+.container-menu ul li {
+    margin-left: 20px;
+}
+
+.container-menu ul li a {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container-switch {
+    width: 60px;
+    height: 24px;
+    background-color: gray;
+    position: relative;
+    border-radius: 12px;cursor: pointer;
+}
+
+.container-switch .switch {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    transition: 0.5s;
+}
+
+.active {
+    background-color: beige;
+}
+
+.active .switch {
+    left: 100%;
+    width: 24px;
+    height: 24px;
+    transform: translate(calc(-100% - 2px), -50%);
+    background-color: green;
+    transition: 0.5s;
+}
